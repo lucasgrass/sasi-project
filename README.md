@@ -1,34 +1,69 @@
-# 📝 ToDo List API (NestJS + TypeScript)
+# ToDo List API (NestJS + TypeScript)
 
-This is a task management API (ToDo List) built with NestJS and TypeScript, using memory storage.
+This is a task management API (ToDo List) built with NestJS and TypeScript, using in-memory storage.
 
-Endpoints:
+## Functional requirements
 
-- GET /tasks: list all tasks
+Each task must contain: `id`, `title`, `description`, `completed` (boolean), `status`, and `createdAt`.
 
-- POST /tasks: create a new task (with title and description)
+The storage can be in-memory (no database required).
 
-- PATCH /tasks/:id: mark a task as completed
+## **Available routes**
 
-- DELETE /tasks/:id: remove a task
+### - `GET /tasks`
 
-Functional requirements:
-
-Each task must contain: id, title, description, completed (boolean), status, and createdAt
-
-The storage can be in-memory
+Lists all registered tasks.
 
 ---
 
-## **How to run the project**
+### - `POST /tasks`
+
+Creates a new task.
+
+**Example body:**
+
+```json
+{
+  "title": "Title",
+  "description": "Description"
+}
+```
+
+---
+
+### - `PATCH /tasks/:id`
+
+Updates the status of a task (marking it as done or pending).
+
+**Example body:**
+
+```json
+{
+  "completed": true
+}
+```
+
+---
+
+### - `DELETE /tasks/:id`
+
+Removes a task by the ID.
+
+---
+
+---
+
+## How to run the project
+
+### Prerequisites
+
+- [Node.js](https://nodejs.org/) (v14 or higher)  
+- npm (comes with Node.js)
+
+### Installation
 
 ```bash
-# Install dependencies
 npm install
-
-# Start the server
-npm run start
-```
 
 The API will be available at:
 
@@ -44,56 +79,13 @@ http://localhost:3000/api
 
 ---
 
-## **Available routes**
-
-### 🔹 `GET /tasks`
-
-Lists all registered tasks.
-
----
-
-### 🔹 `POST /tasks`
-
-Creates a new task.
-
-📝 **Example body:**
-
-```json
-{
-  "title": "Title",
-  "description": "Description"
-}
-```
-
----
-
-### 🔹 `PATCH /tasks/:id`
-
-Updates the status of a task (marking it as done or pending).
-
-📝 **Example body:**
-
-```json
-{
-  "completed": true
-}
-```
-
----
-
-### 🔹 `DELETE /tasks/:id`
-
-Removes a task by the ID.
-
----
-
 ## **Tests**
 
 The project includes **unit tests** for the `TasksService` and `TasksController`:
 
-✅ **TasksService**
+- **TasksService**
 
-✅ **TasksController**
+- **TasksController**
 
 ### How to run the tests:
 
@@ -103,7 +95,7 @@ npm run test
 
 ---
 
-## 👨‍💻 **Technologies**
+## **Technologies**
 
 * [NestJS](https://nestjs.com/)
 * TypeScript
@@ -111,7 +103,7 @@ npm run test
 
 ---
 
-## 📂 **Folder structure**
+## **Folder structure**
 
 ```
 src/
