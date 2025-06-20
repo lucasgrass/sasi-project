@@ -2,6 +2,22 @@
 
 This is a task management API (ToDo List) built with NestJS and TypeScript, using memory storage.
 
+Endpoints:
+
+- GET /tasks: list all tasks
+
+- POST /tasks: create a new task (with title and description)
+
+- PATCH /tasks/:id: mark a task as completed
+
+- DELETE /tasks/:id: remove a task
+
+Functional requirements:
+
+Each task must contain: id, title, description, completed (boolean), status, and createdAt
+
+The storage can be in-memory
+
 ---
 
 ## **How to run the project**
