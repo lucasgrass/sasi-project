@@ -51,28 +51,25 @@ Removes a task by the ID.
 
 ---
 
----
-
 ## How to run the project
 
 ### Prerequisites
 
-- [Node.js](https://nodejs.org/) (v14 or higher)  
-- npm (comes with Node.js)
+- [Node.js](https://nodejs.org/)  
+- npm
 
 ### Installation
 
 ```bash
 npm install
+```
 
 The API will be available at:
-
 ```
 http://localhost:3000
 ```
 
 You can also access the Swagger documentation at:
-
 ```
 http://localhost:3000/api
 ```
@@ -83,9 +80,9 @@ http://localhost:3000/api
 
 The project includes **unit tests** for the `TasksService` and `TasksController`:
 
-- **TasksService**
+**TasksService**
 
-- **TasksController**
+**TasksController**
 
 ### How to run the tests:
 
